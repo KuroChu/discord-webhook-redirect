@@ -5,7 +5,7 @@ const app = express();
 // Middleware to parse JSON body
 app.use(express.json());
 
-app.post("/webhook", async (req, res) => {
+app.post("/", async (req, res) => {
   // Extract the webhook path, Discord webhook URL, and embed flag from query parameters
   const webhookPath = req.query["webhook-path"];
   const discordWebhookUrl = req.query["discord-webhook-url"];
